@@ -1,0 +1,46 @@
+body,html {
+    background-color: rgb(66, 66, 66);
+  }
+  
+  h1 {
+    color: black;
+    text-align: center;
+    border-style:solid;
+    background-color: aliceblue;
+    font-size: 60px;
+    border-radius: 50px;
+  }
+  
+  h4 {
+    font-size: x-large;
+    text-align: center;
+    color: aliceblue;
+  }
+
+
+ul {
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font: arial;
+    border:black 3px solid;
+    width: 650px;
+    background-color: aliceblue;
+
+}
+
+img {
+    position: absolute;
+    top: 5.5cm;
+    left: 35cm;
+    border-style: groove;
+    background-color: black;
+    border-radius: 5px;
+}
+a {
+    border: black 3px solid;
+    background-color: aliceblue;
+    color: black;
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font: arial;
+}
