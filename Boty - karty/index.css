@@ -1,0 +1,48 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+
+.hlavni {
+    display: flex;
+    margin: 0px 0px;
+    line-height: 27px;
+}
+
+.tlacitko{
+    background-color: rgb(255, 0, 0);
+    padding: 8px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 100px 200px;
+    cursor: pointer;
+    border: 40px;
+    border-color: black;
+    border-radius: 15px;
+}
+
+
+.text{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    font: arial;
+    border-style:groove;
+    border-color: black;
+    border-radius: 15px;
+    background-color: aliceblue;
+}
+
+.obrazek{
+    margin: 95px 100px;
+}
+
+.karta{
+    background-color: rgb(185, 140, 221);
+    border-style: solid;
+    border-color: black;
+    border-radius: 15px;
+    margin: 1px 1px;
+}
