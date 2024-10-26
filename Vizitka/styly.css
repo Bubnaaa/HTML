@@ -1,0 +1,50 @@
+body{
+    background-image: url(erik-eastman--6zFVL4YuaM-unsplash.jpg);
+}
+
+.karta_jedna{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 100px;
+    background-color: rgb(98, 172, 142);
+    flex-direction: column;
+    gap: 30px 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.karta_dva{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    border: rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 24px;
+    background-color: c;
+    flex-direction: column;
+    gap: 5px 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(98, 172, 142);
+    color: rgb(0, 0, 0);
+}
+
+.karta_dva:hover{
+    color: rgba(0, 136, 255, 0);
+    background-color: rgba(165, 42, 42, 0);
+    transition: 500ms;
+}
+
+.tlacitko{
+    border-color: rgb(98, 172, 142);
+    border-style: none;
+    background-color: rgb(98, 172, 142);
+}
