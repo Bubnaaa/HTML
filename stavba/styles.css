@@ -1,0 +1,136 @@
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: #ff0000;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: #fafafa;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: #5f0000;
+    color: white;
+    padding: 10px 0;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 1.2em;
+}
+
+/* Main section styles */
+main {
+    padding: 50px 0;
+}
+
+.intro {
+    background-color: #ecf0f1;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.services, .references, .contact {
+    padding: 30px 0;
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.service-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 30%;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover{
+    transform: scale(1.05);
+
+}
+
+.service-item h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.references ul {
+    padding: 0;
+}
+
+.references ul li {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.logo{
+    left: 1%;
+    position: absolute;
+}
+
+.logo1 img{     
+    width: 10%;
+
+}
+
+.odkaz{
+    color: #5f0000;
+}
+
+.fotogalerie{
+    display:flex;
+    justify-content: space-between;
+}
+
+.fotogalerie img{
+    width: 30%;
+}
+
+/* Footer styles */
+footer {
+    background-color: #5f0000;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
