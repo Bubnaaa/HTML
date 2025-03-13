@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_header.css">
+    <link rel="stylesheet" href="style_hadej_vlajku.css">
+    <link rel="stylesheet" href="style_footer.css">
+</head>
+
+<body>
+    <header>
+        <ul class="menu">
+            <li><a href="kvizy.html">Domů</a></li>
+            <li>
+                <a href="#">Kvízy</a>
+                <ul class="submenu">
+                    <li><a href="kvizy_Evropa.html">Evropa</a></li>
+                    <li><a href="kvizy_Asie.html">Asie</a></li>
+                    <li><a href="kvizy_Severni_Amerika.html">Severní Amerika</a></li>
+                </ul>
+            </li>
+            <li><a href="hadej_vlajku.html">Hádej vlajku</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="nadpis">
+        <h1 class="title">Hádej vlajku</h1>
+        <p class="text">Napiš prosím celý název státu i s diakritikou.</p>
+        </div>
+        <div class="cely">
+            <p class="skore" id="score">Skóre: 0</p>
+            <div class="flag">
+                <img id="flagImage" src="" alt="Flag">
+            </div>
+            <br>
+            <div class="input">
+                <input class="pole" type="text" id="answer" placeholder="Napiš název země">
+            </div>
+            <div class="button">
+                <button class="tlacitko" onclick="checkAnswer()">Odeslat</button>
+            </div>
+        </div>
+        <div class="skip">
+            <button class="preskocit" onclick="skipQuestion()"><svg height="2em" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512">
+                    <path
+                        d="M52.5 440.6c-9.5 7.9-22.8 9.7-34.1 4.4S0 428.4 0 416L0 96C0 83.6 7.2 72.3 18.4 67s24.5-3.6 34.1 4.4L224 214.3l0 41.7 0 41.7L52.5 440.6zM256 352l0-96 0-128 0-32c0-12.4 7.2-23.7 18.4-29s24.5-3.6 34.1 4.4l192 160c7.3 6.1 11.5 15.1 11.5 24.6s-4.2 18.5-11.5 24.6l-192 160c-9.5 7.9-22.8 9.7-34.1 4.4s-18.4-16.6-18.4-29l0-64z" />
+                </svg>
+            </button>
+
+        </div>
+
+
+
+        <div id="popup" class="popup">
+            <p id="popupMessage"></p>
+            <button onclick="closePopup()">OK</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Michal Bubna</p>
+    </footer>
+
+    <script>
+        const flags = [
+            { country: "Afghánistán", casual: "Afghanistan", image: "https://flagcdn.com/w320/af.png" },
+            { country: "Albánie", casual: "Albanie", image: "https://flagcdn.com/w320/al.png" },
+            { country: "Alžírsko", casual: "Alzirsko", image: "https://flagcdn.com/w320/dz.png" },
+            { country: "Andorra", casual: "Andorra", image: "https://flagcdn.com/w320/ad.png" },
+            { country: "Angola", casual: "Angola", image: "https://flagcdn.com/w320/ao.png" },
+            { country: "Antigua a Barbuda", casual: "Antigua a Barbuda", image: "https://flagcdn.com/w320/ag.png" },
+            { country: "Argentina", casual: "Argentina", image: "https://flagcdn.com/w320/ar.png" },
+            { country: "Arménie", casual: "Armenie", image: "https://flagcdn.com/w320/am.png" },
+            { country: "Austrálie", casual: "Australie", image: "https://flagcdn.com/w320/au.png" },
+            { country: "Ázerbájdžán", casual: "Azerbajdzan", image: "https://flagcdn.com/w320/az.png" },
+            { country: "Bahamy", casual: "Bahamy", image: "https://flagcdn.com/w320/bs.png" },
+            { country: "Bahrajn", casual: "Bahrajn", image: "https://flagcdn.com/w320/bh.png" },
+            { country: "Bangladéš", casual: "Bangladesh", image: "https://flagcdn.com/w320/bd.png" },
+            { country: "Barbados", casual: "Barbados", image: "https://flagcdn.com/w320/bb.png" },
+            { country: "Bělorusko", casual: "Belorusko", image: "https://flagcdn.com/w320/by.png" },
+            { country: "Belgie", image: "https://flagcdn.com/w320/be.png" },
+            { country: "Belize", image: "https://flagcdn.com/w320/bz.png" },
+            { country: "Benin", image: "https://flagcdn.com/w320/bj.png" },
+            { country: "Bhútán", casual: "Bhutan", image: "https://flagcdn.com/w320/bt.png" },
+            { country: "Bolívie", casual: "Bolivie", image: "https://flagcdn.com/w320/bo.png" },
+            { country: "Bosna a Hercegovina", image: "https://flagcdn.com/w320/ba.png" },
+            { country: "Botswana", image: "https://flagcdn.com/w320/bw.png" },
+            { country: "Brazílie", casual: "Brazilie", image: "https://flagcdn.com/w320/br.png" },
+            { country: "Brunej", image: "https://flagcdn.com/w320/bn.png" },
+            { country: "Bulharsko", image: "https://flagcdn.com/w320/bg.png" },
+            { country: "Burkina Faso", image: "https://flagcdn.com/w320/bf.png" },
+            { country: "Burundi", image: "https://flagcdn.com/w320/bi.png" },
+            { country: "Česko", casual: "Cesko", image: "https://flagcdn.com/w320/cz.png" },
+            { country: "Čína", casual: "Cina", image: "https://flagcdn.com/w320/cn.png" },
+            { country: "Dánsko", casual: "Dansko", image: "https://flagcdn.com/w320/dk.png" },
+            { country: "Dominika", image: "https://flagcdn.com/w320/dm.png" },
+            { country: "Dominikánská republika", casual: "Dominikanska republika", image: "https://flagcdn.com/w320/do.png" },
+            { country: "Egypt", image: "https://flagcdn.com/w320/eg.png" },
+            { country: "Francie", image: "https://flagcdn.com/w320/fr.png" },
+            { country: "Indie", image: "https://flagcdn.com/w320/in.png" },
+            { country: "Indonésie", casual: "Indonesie", image: "https://flagcdn.com/w320/id.png" },
+            { country: "Irák", casual: "Irak", image: "https://flagcdn.com/w320/iq.png" },
+            { country: "Írán", casual: "Iran", image: "https://flagcdn.com/w320/ir.png" },
+            { country: "Island", casual: "Island", image: "https://flagcdn.com/w320/is.png" },
+            { country: "Itálie", casual: "Italie", image: "https://flagcdn.com/w320/it.png" },
+            { country: "Jamajka", image: "https://flagcdn.com/w320/jm.png" },
+            { country: "Japonsko", image: "https://flagcdn.com/w320/jp.png" },
+            { country: "Jihoafrická republika", casual: "Jihoafricka republika", image: "https://flagcdn.com/w320/za.png" },
+            { country: "Kanada", image: "https://flagcdn.com/w320/ca.png" },
+            { country: "Keňa", casual: "Kena", image: "https://flagcdn.com/w320/ke.png" },
+            { country: "Kolumbie", image: "https://flagcdn.com/w320/co.png" },
+            { country: "Kuba", image: "https://flagcdn.com/w320/cu.png" },
+            { country: "Mexiko", image: "https://flagcdn.com/w320/mx.png" },
+            { country: "Německo", casual: "Nemecko", image: "https://flagcdn.com/w320/de.png" },
+            { country: "Polsko", image: "https://flagcdn.com/w320/pl.png" },
+            { country: "Portugalsko", image: "https://flagcdn.com/w320/pt.png" },
+            { country: "Rusko", image: "https://flagcdn.com/w320/ru.png" },
+            { country: "Slovensko", image: "https://flagcdn.com/w320/sk.png" },
+            { country: "Spojené království", casual: "Spojene kralovstvi", image: "https://flagcdn.com/w320/gb.png" },
+            { country: "Spojené státy", casual: "Spojene staty", image: "https://flagcdn.com/w320/us.png" },
+            { country: "Španělsko", casual: "Spanelsko", image: "https://flagcdn.com/w320/es.png" },
+            { country: "Švédsko", casual: "Svedsko", image: "https://flagcdn.com/w320/se.png" },
+            { country: "Švýcarsko", casual: "Svycarsko", image: "https://flagcdn.com/w320/ch.png" },
+            { country: "Ukrajina", image: "https://flagcdn.com/w320/ua.png" },
+            { country: "Vietnam", image: "https://flagcdn.com/w320/vn.png" },
+            { country: "Východní Timor", casual: "Vychodni Timor", image: "https://flagcdn.com/w320/tl.png" },
+            { country: "Zambie", image: "https://flagcdn.com/w320/zm.png" },
+            { country: "Zimbabwe", image: "https://flagcdn.com/w320/zw.png" },
+            { country: "Vatikán", casual: "Vatikan", image: "https://flagcdn.com/w320/va.png" },
+            { country: "Venezuela", image: "https://flagcdn.com/w320/ve.png" },
+            { country: "Spojené arabské emiráty", casual: "Spojene arabske emiraty", image: "https://flagcdn.com/w320/ae.png" },
+            { country: "Uruguay", image: "https://flagcdn.com/w320/uy.png" },
+            { country: "Uzbekistán", casual: "Uzbekistan", image: "https://flagcdn.com/w320/uz.png" },
+            { country: "Wallis a Futuna", image: "https://flagcdn.com/w320/wf.png" },
+            { country: "Západní Sahara", casual: "Zapadni Sahara", image: "https://flagcdn.com/w320/eh.png" },
+            { country: "Tádžikistán", casual: "Tadzikistan", image: "https://flagcdn.com/w320/tj.png" },
+            { country: "Tanzanie", image: "https://flagcdn.com/w320/tz.png" },
+            { country: "Thajsko", image: "https://flagcdn.com/w320/th.png" },
+            { country: "Togo", image: "https://flagcdn.com/w320/tg.png" },
+            { country: "Tonga", image: "https://flagcdn.com/w320/to.png" },
+            { country: "Trinidad a Tobago", image: "https://flagcdn.com/w320/tt.png" },
+            { country: "Tunisko", image: "https://flagcdn.com/w320/tn.png" },
+            { country: "Turecko", image: "https://flagcdn.com/w320/tr.png" },
+            { country: "Turkmenistán", casual: "Turkmenistan", image: "https://flagcdn.com/w320/tm.png" },
+            { country: "Tuvalu", image: "https://flagcdn.com/w320/tv.png" },
+            { country: "Uganda", image: "https://flagcdn.com/w320/ug.png" }
+        ];
+        let currentFlag = {};
+
+        let score = 0;
+
+        function getRandomFlag() {
+            currentFlag = flags[Math.floor(Math.random() * flags.length)];
+            document.getElementById("flagImage").src = currentFlag.image;
+            document.getElementById("answer").value = "";
+        }
+
+
+        function showPopup(message) {
+            document.getElementById("popupMessage").innerText = message;
+            document.getElementById("popup").style.display = "block";
+        }
+
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+
+
+        }
+        function checkAnswer() {
+            let userInput = document.getElementById("answer").value.trim();
+            if (userInput.toLowerCase() === currentFlag.country.toLowerCase()) {
+                getRandomFlag();
+            } else {
+                showPopup("Špatně, zkus to znovu. ❌");
+            }
+        }
+
+        function skipQuestion() {
+            getRandomFlag();
+        }
+
+        function checkAnswer() {
+            let userInput = document.getElementById("answer").value.trim().toLowerCase();
+
+            let correctNames = [currentFlag.country.toLowerCase()];
+
+            if (currentFlag.casual) {
+                correctNames.push(currentFlag.casual.toLowerCase());
+            }
+
+            if (correctNames.includes(userInput)) {
+                score++;
+                updateScore();
+                getRandomFlag();
+            } else {
+                showPopup("Špatně, zkus to znovu. ❌");
+                score = 0;
+                updateScore();
+            }
+        }
+        document.getElementById("answer").addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                checkAnswer();
+            }
+        });
+
+
+        function resetGame() {
+            score = 0; 
+            updateScore();
+            getRandomFlag();
+        }
+
+        function updateScore() {
+            document.getElementById("score").innerText = "Skóre: " + score;
+        }
+
+        getRandomFlag();
+        updateScore();
+    </script>
+</body>
+
+</html>

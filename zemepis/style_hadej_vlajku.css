@@ -1,0 +1,118 @@
+body{
+    background-color: rgb(199, 199, 199);
+    height: 100vh;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+   
+}
+.nadpis{
+    border: 2px solid #000000;
+        
+}
+.title{
+    text-align: center;
+    color: #000000;
+    font-size: 2rem;
+}
+
+.flag{
+    display:flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.input{
+    display:flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.pole{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    font-size: 17px;
+    text-align: center;
+    background-color:rgb(255, 255, 255) ;
+    padding: 10px;
+}
+
+.button{
+    display:flex;
+    justify-content: center;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+.tlacitko{
+    background-color: rgb(255, 255, 255);
+    padding: 8px 40px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 1000;
+}
+
+.popup button {
+
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    background: #28a745;
+    text-align: center;
+    font-size: large;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.text{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+}
+
+.skip{
+    display:flex;
+    justify-content: center;
+}
+
+.preskocit{
+    background-color: rgb(255, 255, 255);
+    padding: 8px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border: 40px;
+    border-color: black;
+    border-radius: 15px;
+}
+
+.skore{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+}
+
+
+
