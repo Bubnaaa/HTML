@@ -1,0 +1,410 @@
+body{
+    background-image: url(pozadi.png) ;
+
+    padding: 0%;
+    margin: 0%;
+}
+
+@font-face {
+    font-family: 'Nadpisy';
+    src: url('fonts/ClimateCrisis.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'texty';
+    src: url('fonts/FuturaNowHeadline.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+h1{
+    font-family: 'Nadpisy';
+    font-size: 2em;
+    text-align: center;
+    color:#8600ff;
+    font-weight: normal;
+
+}
+
+h1 a{
+    color: #8600ff;
+}
+
+span{
+    font-family: texty;
+}
+
+.jmeno{
+    font-weight: bolder;
+}
+
+.basen{
+    text-align: center;
+}
+
+.card1{
+    display: flex;
+    width: 100%;
+    margin-bottom: 1%;
+
+}
+
+.card1_1{
+    width: 45%;
+    background-color: #62f367;
+}
+
+.card1_2{
+    width: 55%;
+    background-color: #8600ff;
+}
+
+@media screen and (max-width: 600px) {
+    .card1{
+        flex-direction: column;
+    }
+
+    .card1_1{
+        width: 100%;
+    }
+
+    .card1_2{
+        width: 100%;
+    }
+    
+}
+
+.card2{
+    display: flex;
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+.card2_1{
+    width: 55%;
+    background-color: #8600ff;
+}
+
+.card2_2{
+    width: 45%;
+    background-color: #62f367;
+}
+
+@media screen and (max-width: 600px) {
+    .card2{
+        flex-direction: column;
+    }
+
+    .card2_1{
+        width: 100%;
+    }
+
+    .card2_2{
+        width: 100%;
+    }
+    
+}
+
+.card3{
+    display: flex;
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+.card3_1{
+    width: 45%;
+    background-color: #62f367;
+}
+
+.card3_2{
+    width: 55%;
+    background-color: #8600ff;
+}
+
+@media screen and (max-width: 600px) {
+    .card3{
+        flex-direction: column;
+    }
+
+    .card3_1{
+        width: 100%;
+    }
+
+    .card3_2{
+        width: 100%;
+    }
+    
+}
+
+.card4{
+    display: flex;
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+.card4_1{
+    width: 55%;
+    background-color: #8600ff;
+}
+
+.card4_2{
+    width: 45%;
+    background-color: #62f367;
+}
+
+@media screen and (max-width: 600px) {
+    .card4{
+        flex-direction: column;
+    }
+
+    .card4_1{
+        width: 100%;
+    }
+
+    .card4_2{
+        width: 100%;
+    }
+    
+}
+
+.card5{
+    display: flex;
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+.card5_1{
+    width: 45%;
+    background-color: #62f367;
+}
+
+.card5_2{
+    width: 55%;
+    background-color: #8600ff;
+}
+
+@media screen and (max-width: 600px) {
+    .card5{
+        flex-direction: column;
+    }
+
+    .card5_1{
+        width: 100%;
+    }
+
+    .card5_2{
+        width: 100%;
+    }
+    
+}
+
+.card6{
+    display: flex;
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+.card6_1{
+    width: 55%;
+    background-color: #8600ff;
+}
+
+.card6_2{
+    width: 45%; 
+    background-color: #62f367;
+}
+
+@media screen and (max-width: 600px) {
+    .card6{
+        flex-direction: column;
+    }
+
+    .card6_1{
+        width: 100%;
+    }
+
+    .card6_2{
+        width: 100%;
+    }
+    
+}
+
+.card7{
+    display: flex;
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+.card7_1{
+    width: 45%;
+    background-color: #62f367;
+}
+
+.card7_2{
+    width: 55%;
+    background-color: #8600ff;
+}
+
+@media screen and (max-width: 600px) {
+    .card7{
+        flex-direction: column;
+    }
+
+    .card7_1{
+        width: 100%;
+    }
+
+    .card7_2{
+        width: 100%;
+    }
+    
+}
+
+.card8{
+    display: flex;
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+.card8_1{
+    width: 55%;
+    background-color: #8600ff;
+}
+
+.card8_2{
+    width: 45%;
+    background-color: #62f367;
+}
+
+@media screen and (max-width: 600px) {
+    .card8{
+        flex-direction: column;
+    }
+
+    .card8_1{
+        width: 100%;
+    }
+
+    .card8_2{
+        width: 100%;
+    }
+    
+}
+
+.card9{
+    display: flex;
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+.card9_1{
+    width: 45%;
+    background-color: #62f367;
+}
+
+.card9_2{
+    width: 55%;
+    background-color: #8600ff;
+}
+
+@media screen and (max-width: 600px) {
+    .card9{
+        flex-direction: column;
+    }
+
+    .card9_1{
+        width: 100%;
+    }
+
+    .card9_2{
+        width: 100%;
+    }
+    
+}
+
+.card10{
+    display: flex;
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+.card10_1{
+    width: 55%;
+    background-color: #8600ff;
+}
+
+.card10_2{
+    width: 45%;
+    background-color: #62f367;
+}
+
+@media screen and (max-width: 600px) {
+    .card10{
+        flex-direction: column;
+    }
+
+    .card10_1{
+        width: 100%;
+    }
+
+    .card10_2{
+        width: 100%;
+    }
+    
+}
+
+.card11{
+    display: flex;
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+.card11_1{
+    width: 45%;
+    background-color: #62f367;
+}
+
+.card11_2{
+    width: 55%;
+    background-color: #8600ff;
+}
+
+@media screen and (max-width: 600px) {
+    .card11{
+        flex-direction: column;
+    }
+
+    .card11_1{
+        width: 100%;
+    }
+
+    .card11_2{
+        width: 100%;
+    }
+    
+}
+
+
+footer{
+    background-color: #8800ff;
+
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: texty;
+}
+
+
+
+

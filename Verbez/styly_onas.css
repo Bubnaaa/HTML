@@ -1,0 +1,77 @@
+body{
+    background-color: #ffffff;
+    margin: 0%;
+    padding: 0%;
+}
+
+.text{
+    text-align: center;
+    font-family: texty;
+    color: #8600ff;
+    font-weight:inherit;
+    font-size: larger;
+}
+
+.textik{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+@font-face {
+    font-family: 'Nadpisy';
+    src: url('fonts/ClimateCrisis.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'texty';
+    src: url('fonts/FuturaNowHeadline.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+h1{
+    font-family: 'Nadpisy';
+    font-size: 2em;
+    text-align: center;
+    color:#8600ff;
+    font-weight: normal;
+
+}
+
+h1 a{
+    color: #8600ff;
+}
+
+.logo_horni{
+    display: flex;
+    justify-content: center;
+    ;
+}
+
+.logo_dolni{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+
+}
+
+footer{
+    background-color: #8800ff;
+
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: texty;
+}
+
