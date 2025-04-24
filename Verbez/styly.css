@@ -54,12 +54,14 @@ span{
     display: flex;
     width: 100%;
     margin-bottom: 1%;
+    
 
 }
 
 .card1_1{
     width: 45%;
     background-color: #62f367;
+    padding-left: 1%;
 }
 
 .card1_2{
@@ -91,6 +93,7 @@ span{
 .card2_1{
     width: 55%;
     background-color: #8600ff;
+    padding-left: 1%;
 }
 
 .card2_2{
@@ -122,6 +125,7 @@ span{
 .card3_1{
     width: 45%;
     background-color: #62f367;
+    padding-left: 1%;
 }
 
 .card3_2{
@@ -153,6 +157,7 @@ span{
 .card4_1{
     width: 55%;
     background-color: #8600ff;
+    padding-left: 1%;
 }
 
 .card4_2{
@@ -184,6 +189,7 @@ span{
 .card5_1{
     width: 45%;
     background-color: #62f367;
+    padding-left: 1%;
 }
 
 .card5_2{
@@ -215,6 +221,7 @@ span{
 .card6_1{
     width: 55%;
     background-color: #8600ff;
+    padding-left: 1%;
 }
 
 .card6_2{
@@ -246,6 +253,7 @@ span{
 .card7_1{
     width: 45%;
     background-color: #62f367;
+    padding-left: 1%;
 }
 
 .card7_2{
@@ -277,6 +285,7 @@ span{
 .card8_1{
     width: 55%;
     background-color: #8600ff;
+    padding-left: 1%;
 }
 
 .card8_2{
@@ -308,6 +317,7 @@ span{
 .card9_1{
     width: 45%;
     background-color: #62f367;
+    padding-left: 1%;
 }
 
 .card9_2{
@@ -339,6 +349,7 @@ span{
 .card10_1{
     width: 55%;
     background-color: #8600ff;
+    padding-left: 1%;
 }
 
 .card10_2{
@@ -370,6 +381,7 @@ span{
 .card11_1{
     width: 45%;
     background-color: #62f367;
+    padding-left: 1%;
 }
 
 .card11_2{
@@ -405,6 +417,51 @@ footer{
     font-family: texty;
 }
 
+@media screen and (max-width: 600px) {
+    .card1_2{
+        display: none;
+    }
 
+    .card2_2{
+        display: none;
+    }
+
+    .card3_2{    
+        display: none;
+    }  
+
+    .card4_2{
+        display: none;
+    }
+
+    .card5_2{
+        display: none;
+    }
+
+    .card6_2{
+        display: none;
+    }
+
+    .card7_2{
+        display: none;
+    }
+
+    .card8_2{
+        display: none;
+    }
+
+    .card9_2{
+        display: none;
+    }
+
+    .card10_2{
+        display: none;
+    }
+
+    .card11_2{
+        display: none;
+    }
+    
+}
 
 
