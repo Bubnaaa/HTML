@@ -1,0 +1,192 @@
+ body {
+  background-color: #fbf4ec;
+  margin: 20px;
+  font-family: "aktiv";
+}
+
+@font-face {
+  font-family: "aktiv";
+  src: url("../2_font/AktivGrotesk-Bold.woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fbf4ec;
+  position: relative;
+
+}
+
+h1 {
+  color: #000000;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hamburger {
+  margin: 0;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+
+
+nav {
+  position: absolute;
+  top: 80px;
+  right: 0px;
+  background: #fbf4ec;
+  display: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #fbf4ec;
+}
+
+nav.show {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: black
+}
+
+.predchoziakce {
+  text-align: center;
+  padding: 3%;
+}
+
+
+
+.image-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-con img {
+  max-width: 60%;
+  height: auto;
+  display: block;
+}
+
+.predchoziakce button {
+  font-family: "aktiv";
+  cursor: pointer;
+  margin: 0 auto;
+  font-size: x-large;
+  background-color: #fbf4ec;
+  border: 1 rgb(151, 151, 151);
+  border-radius: 10px;
+  padding: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.predchoziakce button:hover {
+
+  transform: scale(1.05);
+}
+
+@media (max-width: 560px) {
+  h1 {
+    display: none;
+  }
+
+  .predchoziakce img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+
+
+}
+
+
+.hidden-content {
+  display: none;
+}
+
+.foto_akce {
+  max-width: 60%;
+  height: auto;
+  padding: 10px;
+}
+
+.hidden-content.show {
+  display: block;
+}
+
+
+.program button {
+  font-family: "aktiv";
+  cursor: pointer;
+  margin: 0 auto;
+  font-size: x-large;
+  background-color: #fbf4ec;
+  border: 1 rgb(151, 151, 151);
+  border-radius: 10px;
+  padding: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.program button:hover {
+  background-color: #ffffff;
+  transform: scale(1.05);
+}
+
+.program {
+  text-align: center;
+  padding: 3%;
+}
+
+.ig {
+  display: flex;
+  justify-content: center;
+}
+
+.onas {
+  text-align: center;
+  padding: 3%;
+}
+
+.kontakt {
+  text-align: center;
+  padding: 3%;
+}
+
+.onas-p {
+  color: #000000;
+}
+
+.foot-p {
+  color: rgb(167, 167, 167);
