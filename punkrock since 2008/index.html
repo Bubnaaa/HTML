@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
     <header class="hero-section">
@@ -24,6 +26,14 @@
             <h1>PUNKROCK</h1>
             <h2>SINCE 2008</h2>
         </div>
+        <div class="hero-countdown">
+            <h3>Čas do dalšího koncertu:</h3>
+            <div id="countdown-timer">
+              <span id="days">0</span> dní 
+              <span id="hours">0</span> hodin 
+              <span id="minutes">0</span> minut 
+              <span id="seconds">0</span> sekund
+            </div>
     </header>
 
     <main>
@@ -41,13 +51,16 @@
                 Jsme banda nadšenců, co miluje pořádnej bordel, hlasitou hudbu a upřímnou energii.
             </p>
             <p>
-                Od roku 2008 pořádáme koncerty, kde se potkávají fanoušci punku, rocku a všech, co to chtějí zažít naplno.
+                Od roku 2008 pořádáme koncerty, kde se potkávají fanoušci punku, rocku a všech, co to chtějí zažít
+                naplno.
             </p>
             <p>
-                Naší misí je vytvořit prostor, kde nezáleží na věku, stylu nebo minulosti - jen na tom, co cítíš, když to začne hrát.
+                Naší misí je vytvořit prostor, kde nezáleží na věku, stylu nebo minulosti - jen na tom, co cítíš, když
+                to začne hrát.
             </p>
             <p>
-                Nejsme jen pořadatelé. Jsme součást scény. Ať už jsi tady poprvý, nebo jsi s náma od začátku - vítej doma.
+                Nejsme jen pořadatelé. Jsme součást scény. Ať už jsi tady poprvý, nebo jsi s náma od začátku - vítej
+                doma.
             </p>
             <img src="hand-rock-roll-sign-vector-illustration_573689-64156.jpg" class="obrazek">
         </section>
@@ -74,10 +87,43 @@
             </div>
         </section>
     </main>
-    
+
     <footer class="footer">
-        <p>web-design by: Michal Balna ©2025</p>
+        <p>web-design by: Michal Bubna ©2025</p>
     </footer>
 
+
+    <script>
+        // Odpočet do koncertu
+        const concertDate = new Date("January 16, 2026 20:00:00").getTime();
+      
+        function updateCountdown() {
+          const now = new Date().getTime();
+          const distance = concertDate - now;
+      
+          if (distance < 0) {
+            document.getElementById("countdown-timer").innerHTML = "Koncert proběhl!";
+            clearInterval(interval);
+            return;
+          }
+      
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+          document.getElementById("days").textContent = days;
+          document.getElementById("hours").textContent = hours;
+          document.getElementById("minutes").textContent = minutes;
+          document.getElementById("seconds").textContent = seconds;
+        }
+      
+        updateCountdown();
+        const interval = setInterval(updateCountdown, 1000);
+      </script>
+      
+
+
 </body>
+
 </html>
